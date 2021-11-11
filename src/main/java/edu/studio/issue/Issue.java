@@ -3,13 +3,20 @@ package edu.studio.issue;
 import java.util.Date;
 import java.util.Objects;
 
-public class Issue {
+public class Issue implements Comparable<Issue> {
 
     private long id;
-
     private Date createdAt;
-
+    private Date closedAt;
     private User user; // creator
+    private int number;
+    private boolean state;
+    private String title;
+    private String body;
+    private User assignee;
+
+    public Issue() {
+    }
 
     public User getUser() {
         return user;
@@ -27,15 +34,60 @@ public class Issue {
         this.createdAt = createdAt;
     }
 
-    public Issue() {
-    }
-
     public long getId() {
         return id;
     }
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public Date getClosedAt() {
+        return closedAt;
+    }
+
+    public void setClosedAt(Date closedAt) {
+        this.closedAt = closedAt;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
+    }
+
+    public boolean isState() {
+        return state;
+    }
+
+    public void setState(boolean state) {
+        this.state = state;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getBody() {
+        return body;
+    }
+
+    public void setBody(String body) {
+        this.body = body;
+    }
+
+    public User getAssignee() {
+        return assignee;
+    }
+
+    public void setAssignee(User assignee) {
+        this.assignee = assignee;
     }
 
     @Override
@@ -53,6 +105,19 @@ public class Issue {
             return false;
         Issue other = (Issue) obj;
         return id == other.id;
+    }
+
+    @Override
+    public String toString() {
+        return "Issue [title=" + title + ", body=" + body + "]";
+    }
+
+    @Override
+    public int compareTo(Issue other) {
+        // TODO Auto-generated method stub
+        //based on id
+        //comparing this and other by id
+        return 0;
     }
 
 }

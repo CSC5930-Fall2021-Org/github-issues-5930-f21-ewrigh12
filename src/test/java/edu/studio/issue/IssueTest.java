@@ -37,4 +37,37 @@ class IssueTest {
         assertEquals(issueA.hashCode(), issueB.hashCode());
     }
 
+    @Test
+    void testCompareToWhenFirstIsBigger() {
+        Issue issueC = new Issue();
+        issueC.setId(1000);
+        
+        Issue issueD = new Issue();
+        issueD.setId(999);
+        
+        assertTrue(issueC.compareTo(issueD) > 0);
+    }
+    
+    @Test
+    void testCompareToWhenFirstIsSmaller() {
+        Issue issueE = new Issue();
+        issueE.setId(999);
+        
+        Issue issueF = new Issue();
+        issueF.setId(1000);
+        
+        assertTrue(issueE.compareTo(issueF) < 0);
+    }
+    
+    @Test
+    void testCompareToWhenFirstIsEqual() {
+        Issue issueG = new Issue();
+        issueG.setId(1000);
+        
+        Issue issueH = new Issue();
+        issueH.setId(1000);
+        
+        assertTrue(issueG.compareTo(issueH) == 0);
+    }
+    
 }
