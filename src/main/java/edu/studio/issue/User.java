@@ -41,7 +41,23 @@ public class User {
             return false;
         User other = (User) obj;
         return id == other.id;
-    };
+    }
+
+    @Override
+    public String toString() {
+        return "User [id=" + id + ", login=" + login + "]";
+    }
+
+    public int compareTo(User other) {
+        
+        if (this.id > other.id) {
+            return 1;
+        }
+        else if (this.id < other.id) {
+            return -1;
+        }
+        return 0;
+    }
 
     
     

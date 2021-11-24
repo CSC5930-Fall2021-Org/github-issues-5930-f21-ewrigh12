@@ -13,15 +13,19 @@ import org.junit.jupiter.api.Test;
 import kong.unirest.Unirest;
 
 class GitHubRestClientTest {
-
-    protected static final String TEST_AREA_URL = "https://api.github.com/repos/CSC5930-Fall2021-Org/ghi-demos-5930f21/issues?state=all&creater=ms-O";
     
     @Test
     void testGetIssues() throws IOException {
         GitHubRestClient client = new GitHubRestClient();
         String bearerToken = System.getProperty("bearer.token");
+        assertNotNull(bearerToken);
+        assertTrue(bearerToken.length() > 0);
+        
+        String expectedJson = Files.readString(Paths.get("src/test/resources/testarea.json").toAbsolutePath());
+        assertNotNull(expectedJson);
+        assertTrue(expectedJson.length() > 0);
+        
         String actualJson = client.getIssues(bearerToken);
-        String expectedJson = Files.readString(Paths.get("src/test/resources/sample-output.txt"));
         assertEquals(expectedJson,actualJson);
  
     }

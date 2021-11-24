@@ -37,7 +37,7 @@ class IssueTest {
         assertEquals(issueA.hashCode(), issueB.hashCode());
     }
 
-    @Test
+    @Test 
     void testCompareToWhenFirstIsBigger() {
         Issue issueC = new Issue();
         issueC.setId(1000);
@@ -48,7 +48,7 @@ class IssueTest {
         assertTrue(issueC.compareTo(issueD) > 0);
     }
     
-    @Test
+    @Test 
     void testCompareToWhenFirstIsSmaller() {
         Issue issueE = new Issue();
         issueE.setId(999);

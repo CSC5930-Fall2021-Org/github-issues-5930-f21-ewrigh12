@@ -107,16 +107,26 @@ public class Issue implements Comparable<Issue> {
         return id == other.id;
     }
 
+
+
     @Override
     public String toString() {
-        return "Issue [title=" + title + ", body=" + body + "]";
+        return "Issue [id=" + id + ", createdAt=" + createdAt + ", closedAt=" + closedAt + ", user=" + user
+                + ", number=" + number + ", state=" + state + ", title=" + title + ", body=" + body + ", assignee="
+                + assignee + "]";
     }
 
     @Override
     public int compareTo(Issue other) {
         // TODO Auto-generated method stub
-        //based on id
-        //comparing this and other by id
+        // based on id
+        // comparing this and other by id
+        if (this.id > other.id) {
+            return 1;
+        }
+        else if (this.id < other.id) {
+            return -1;
+        }
         return 0;
     }
 

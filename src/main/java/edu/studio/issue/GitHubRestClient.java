@@ -9,6 +9,6 @@ public class GitHubRestClient {
     public String getIssues(String bearerToken) {
         GitHubRestClient client = new GitHubRestClient();
         String issueResponse = Unirest.get(TEST_AREA_URL).header("Authorization", "Bearer " + bearerToken).asString().getBody();
-        return issueResponse;
+        return issueResponse; 
     }
 }

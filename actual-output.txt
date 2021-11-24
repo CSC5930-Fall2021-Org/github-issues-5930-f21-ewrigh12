@@ -1,0 +1,6 @@
+Issue [id=1044979109, createdAt=Thu Nov 04 16:47:23 EDT 2021, closedAt=null, user=User [id=6319957, login=ms-O], number=4, state=false, title=minimal fields, body=null, assignee=null]
+Issue [id=1042639334, createdAt=Tue Nov 02 17:37:34 EDT 2021, closedAt=null, user=User [id=6319957, login=ms-O], number=3, state=false, title=New one added via POST, body=This is our new issue, assignee=null]
+Issue [id=1038774698, createdAt=Thu Oct 28 17:47:17 EDT 2021, closedAt=Thu Oct 28 17:47:43 EDT 2021, user=User [id=6319957, login=ms-O], number=2, state=false, title=A second issue, body=Something doesn't work, assignee=null]
+Issue [id=1038569375, createdAt=Thu Oct 28 14:12:03 EDT 2021, closedAt=null, user=User [id=6319957, login=ms-O], number=1, state=false, title=A first issue's title, body=This is the description of the issue.
+
+More details go here., assignee=User [id=24360383, login=uphunyal]]
